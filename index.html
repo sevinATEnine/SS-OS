@@ -1,27 +1,126 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+    
 <style> 
-div {
-  width: 100px;
-  height: 100px;
-  background: red;
-  transition: width 2s;
-}
 
-div:hover {
-  width: 300px;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+    #operatingSystem {
+        border-width: 4px;
+        border-color: black;
+        border-style: solid;
+        width: 1600px;
+        height: 800px;
+        position: absolute;
+        left: 90px;
+    }
+
+    p,h1,span,h2,h3,h4,h5,h6,a,button {
+        position: relative;
+    }
+
+    #mainScreenTitle {
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 72px;
+        position: relative;
+        margin: 0;
+        top: 30px;
+        left: 200px;
+    }
+
+    #mainScreenNewAccount {
+        font-size: 35px;
+        position: relative;
+        left: 1200px;
+        top: 50px;
+        width: 350px;
+        border-radius: 30px;
+    }
+
+    #mainScreenNewAccount:hover {
+        transform: skew(10deg, 0deg);
+    }
+
+    #mainScreenLogIn {
+        font-size: 35px;
+        position: relative;
+        left: 850px;
+        top: 200px;
+        width: 350px;
+        border-radius: 30px;
+    }
+
+    #mainScreenLogIn:hover {
+        transform: skew(10deg, 0deg);
+    }
+
+    .xCenter {
+        position: relative;
+        left: 480px;
+    }
+
+    #rBox {
+        border-width: 0px;
+        border-color: black;
+        border-style: solid;
+        width: 450px;
+        height: 800px;
+        position: absolute;
+        left: 1150px;
+        top:0px;
+        background-color: blue;
+        
+    }
+
+    #lBox {
+        border-width: 0px;
+        border-color: black;
+        border-style: solid;
+        width: 1150px;
+        height: 800px;
+        position: absolute;
+        left: 0px;
+        top:0px;
+        background-image: linear-gradient(to right, rgb(20, 25, 184),rgb(7, 114, 237));
+        
+    }
+    
+
+
 </style>
+
 </head>
+
 <body>
+        <div id="operatingSystem">
+            <div id="lBox"></div>
+            <p id="mainScreenTitle" class="xCenter">SS Operating System</p>
+            <div id="rBox"></div>
+            <button id="mainScreenNewAccount"><p>Create new account</p></button>
+            <button id="mainScreenLogIn"><p>Sign in</p></button>
+            
 
-<h1>The transition Property</h1>
+        
+        </div>
 
-<p>Hover over the div element below, to see the transition effect:</p>
-<div></div>
+    <script>
+        
+        // var c = document.getElementById("osCanvas");
+        // var ctx = c.getContext("2d");
+        // ctx.moveTo(0, 0);
+        // // ctx.lineTo(300, 150);
+        // ctx.stroke();
+        // ctx.font = "80px Arial";
+        // ctx.fillText("Welcome to the SS OS", 400, 100);
+        // ctx.font = "60px Arial";
+        // ctx.fillText("Create new account", 950, 250);
+    </script>
 
 </body>
+
 </html>
 
 
