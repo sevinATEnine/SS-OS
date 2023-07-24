@@ -29,6 +29,7 @@
         margin: 0;
         top: 30px;
         left: 200px;
+        
     }
 
     #mainScreenNewAccount {
@@ -38,10 +39,12 @@
         top: 50px;
         width: 350px;
         border-radius: 30px;
+        background-color: lightgray;
     }
 
     #mainScreenNewAccount:hover {
         transform: skew(10deg, 0deg);
+        background-color: rgb(79, 76, 76);
     }
 
     #mainScreenLogIn {
@@ -51,10 +54,12 @@
         top: 200px;
         width: 350px;
         border-radius: 30px;
+        background-color: lightgray;
     }
 
     #mainScreenLogIn:hover {
         transform: skew(10deg, 0deg);
+        background-color: rgb(79, 76, 76);
     }
 
     .xCenter {
@@ -96,18 +101,32 @@
 
 <body>
         <div id="operatingSystem">
-            <div id="lBox"></div>
-            <p id="mainScreenTitle" class="xCenter">SS Operating System</p>
-            <div id="rBox"></div>
-            <button id="mainScreenNewAccount"><p>Create new account</p></button>
-            <button id="mainScreenLogIn"><p>Sign in</p></button>
+            <div id="lBox" class="titleScreen"></div>
+            <p id="mainScreenTitle" class="titleScreen xCenter">SS Operating System</p>
+            <div id="rBox" class="titleScreen"></div>
+            <button onclick="mainScreenNewAccount();" class="titleScreen" id="mainScreenNewAccount"><p>Create new account</p></button>
+            <button onclick="mainScreenLogIn();" class="titleScreen" id="mainScreenLogIn"><p>Sign in</p></button>
             
-
         
         </div>
 
     <script>
-        
+        function mainScreenNewAccount() {
+            elementsToHide = document.getElementsByClassName("titleScreen")
+            for (let i = 0; i < 5; i++) {
+                elementsToHide[i].style = "opacity: 0;"
+            }
+            
+        }
+
+        function mainScreenLogIn() {
+            elementsToHide = document.getElementsByClassName("titleScreen")
+            for (let i = 0; i < 5; i++) {
+                elementsToHide[i].style = "opacity: 0;"
+            }
+        }
+
+
         // var c = document.getElementById("osCanvas");
         // var ctx = c.getContext("2d");
         // ctx.moveTo(0, 0);
